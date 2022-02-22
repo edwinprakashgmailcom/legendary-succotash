@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "42b01050-16db-4d83-9296-92a2771cb395",
+		"name": "MNZ Eval",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://raw.githubusercontent.com/MiddlewareNewZealand/evaluation-instructions/main/xml-api/2.xml",
+			"request": {
+				"method": "HEAD",
+				"header": [],
+				"url": {
+					"raw": "https://raw.githubusercontent.com/MiddlewareNewZealand/evaluation-instructions/main/xml-api/2.xml",
+					"protocol": "https",
+					"host": [
+						"raw",
+						"githubusercontent",
+						"com"
+					],
+					"path": [
+						"MiddlewareNewZealand",
+						"evaluation-instructions",
+						"main",
+						"xml-api",
+						"2.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://raw.githubusercontent.com/MiddlewareNewZealand/evaluation-instructions/main/xml-api/2.xml Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://raw.githubusercontent.com/MiddlewareNewZealand/evaluation-instructions/main/xml-api/2.xml",
+					"protocol": "https",
+					"host": [
+						"raw",
+						"githubusercontent",
+						"com"
+					],
+					"path": [
+						"MiddlewareNewZealand",
+						"evaluation-instructions",
+						"main",
+						"xml-api",
+						"2.xml"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5029/v1/companies/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5029/v1/companies/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5029",
+					"path": [
+						"v1",
+						"companies",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:5029/v1/companies/3",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5029/v1/companies/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5029",
+					"path": [
+						"v1",
+						"companies",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

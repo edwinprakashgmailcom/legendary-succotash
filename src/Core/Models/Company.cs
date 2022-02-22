@@ -3,6 +3,9 @@ using System.Xml.Serialization;
 
 namespace Companies.Core.Models;
 
+/// <summary>
+/// Aggregate root of the domain
+/// </summary>
 public class Company
 {
     [JsonPropertyName("id")]

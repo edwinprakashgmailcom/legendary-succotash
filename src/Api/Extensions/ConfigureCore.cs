@@ -16,16 +16,17 @@ public static class ConfigureCore
             configuration.GetSection(BaseUrlConfiguration.CONFIG_NAME));
         services.AddScoped(typeof(IAppLogger<>), typeof(LoggerAdapter<>));
         services.AddHttpClient<ICompanyQueryService, CompanyQueryService>()
-            //Set 5 min as the lifetime for the HttpMessageHandler objects in the pool
-            .SetHandlerLifetime(TimeSpan.FromSeconds(5))
             .AddPolicyHandler(GetRetryPolicy());
     }
 
+    /// <summary>
+    /// Retry policy for network failures, request timeouts and HTTP 5XX status codes
+    /// </summary>
+    /// <returns></returns>
     static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
     {
         return HttpPolicyExtensions
             .HandleTransientHttpError()
-            .OrResult(msg => msg.StatusCode == System.Net.HttpStatusCode.NotFound)
             .WaitAndRetryAsync(2, retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)));
     }
 }

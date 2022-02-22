@@ -12,7 +12,7 @@ public class GetByIdTest
     [TestMethod]
     public async Task ReturnsItemGivenValidId()
     {
-        var response = await ProgramTest.NewClient.GetAsync("companies/2");
+        var response = await ProgramTest.NewClient.GetAsync("v1/companies/2");
         response.EnsureSuccessStatusCode();
         var stringResponse = await response.Content.ReadAsStringAsync();
         Assert.IsNotNull(stringResponse);
@@ -26,7 +26,7 @@ public class GetByIdTest
     [TestMethod]
     public async Task ReturnsNotFoundGivenInvalidId()
     {
-        var response = await ProgramTest.NewClient.GetAsync("companies/3");
+        var response = await ProgramTest.NewClient.GetAsync("v1/companies/3");
 
         Assert.AreEqual(HttpStatusCode.NotFound, response.StatusCode);
     }

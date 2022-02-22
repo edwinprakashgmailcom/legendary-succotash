@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc.Testing;
-using Microsoft.VisualStudio.TestPlatform.TestHost;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Net.Http;
 
@@ -22,7 +21,5 @@ public class ProgramTest
     public static void AssemblyInitialize(TestContext _)
     {
         _application = new WebApplicationFactory<Program>();
-
     }
-
 }

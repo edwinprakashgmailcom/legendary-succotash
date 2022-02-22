@@ -30,7 +30,6 @@ public class ExceptionMiddleware
         logger.LogError(exception, "An unexpected error has occured.");
 
         context.Response.ContentType = "application/json";
-
         context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
         await context.Response.WriteAsync(new Error("An unexpected error has occured.", "Please try again or contact support@helpme.please").ToString());
     }

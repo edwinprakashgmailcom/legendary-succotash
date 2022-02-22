@@ -3,7 +3,6 @@ using Companies.Api.Middleware;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);
-
 builder.Logging.AddConsole();
 
 // Add services to the container.
@@ -20,8 +19,6 @@ builder.Services.AddHealthChecks()
 
 var app = builder.Build();
 
-app.Logger.LogInformation("Api App created...");
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -33,19 +30,11 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseMiddleware<ExceptionMiddleware>();
-
 app.UseCors(ConfigureCors.CORS_POLICY);
-
 app.UseResponseCompression();
-
 app.UseAuthorization();
-
 app.MapHealthChecks("/health");
-
 app.MapControllers();
-
-app.Logger.LogInformation("Launching Api App...");
-
 app.Run();
 
 public partial class Program { }

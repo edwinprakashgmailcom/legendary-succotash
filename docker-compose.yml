@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  companiesapi:
+    image: ${DOCKER_REGISTRY-}companiesapi
+    build:
+      context: .
+      dockerfile: src/Api/Dockerfile

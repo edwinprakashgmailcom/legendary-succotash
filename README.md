@@ -1,3 +1,5 @@
+[![Build Status](https://github.com/edwinprakashgmailcom/legendary-succotash/workflows/companiesapi%20Build%20and%20Test/badge.svg)](https://github.com/edwinprakashgmailcom/legendary-succotash/actions)
+
 # ASP.NET Core Reference Api Application
 
 ## Running the application

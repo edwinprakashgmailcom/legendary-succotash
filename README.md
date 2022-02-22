@@ -2,6 +2,8 @@
 
 # ASP.NET Core Reference Api Application
 
+Build using Visual Studio 2022, .NET 6 and Docker+Docker Compose
+
 ## Running the application
 
 After cloning or downloading you should be able to run it immediately. 

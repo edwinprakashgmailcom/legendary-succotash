@@ -4,15 +4,11 @@
 
 After cloning or downloading you should be able to run it immediately. 
 
-### cli
-Just go to the src/Api folder in a terminal window and run `dotnet run` from there.
+ **CLI** Just go to the src/Api folder in a terminal window and run `dotnet run` from there.
 
-### Visual Studio
-Just F5 to build and run.
-
+ **Visual Studio** Just F5 to build and run.
 
 Now you should be able to browse to `http://localhost:5029/swagger` to see the specifications and try it out.  
-
 
 
 ## Running the application using Docker
